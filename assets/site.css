@@ -1,0 +1,61 @@
+/* Shared look: the stream's HUD board (dark board, cream text, yellow stencil). */
+:root {
+  --board: #1e1b18;
+  --panel: #2a2622;
+  --line: #3a3530;
+  --cream: #f1e9d8;
+  --label: #c9bfae;
+  --yellow: #f2b705;
+  --ink: #14110e;
+}
+* { box-sizing: border-box; }
+html { background: var(--board); }
+body {
+  margin: 0;
+  background: var(--board);
+  color: var(--cream);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--yellow); }
+a:hover { color: #ffd34d; }
+.stripe {
+  height: 12px;
+  background: repeating-linear-gradient(-45deg, var(--yellow) 0 10px, var(--ink) 10px 20px);
+}
+main { max-width: 720px; margin: 0 auto; padding: 40px 16px 56px; overflow-wrap: anywhere; }
+h1, h2 { font-family: "Saira Stencil One", "Oswald", sans-serif; font-weight: 400; color: var(--yellow); line-height: 1.1; }
+h1 { font-size: clamp(36px, 9vw, 60px); margin: 0 0 16px; }
+h2 { font-size: 26px; margin: 40px 0 12px; }
+.lead { font-size: 20px; color: var(--cream); margin: 0 0 24px; }
+.muted { color: var(--label); }
+.button {
+  display: inline-block;
+  font: 600 18px/1 "Oswald", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  border-radius: 4px;
+  padding: 12px 18px;
+}
+.button:hover { color: var(--ink); background: #ffd34d; }
+.commands { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.commands li { display: flex; gap: 14px; align-items: center; }
+.chip {
+  flex: 0 0 96px;
+  text-align: center;
+  font: 600 18px/1 "Oswald", sans-serif;
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 4px;
+  padding: 8px 0;
+}
+.explode { background: #ff5a36; }
+.bounce { background: #8fd16a; }
+.spike { background: #9ea8b0; }
+.ball { background: #8ad0ff; }
+.launch { background: #ff8a1f; }
+.absorb { background: #c77dff; }
+footer { border-top: 2px solid var(--line); margin-top: 48px; padding-top: 16px; font-size: 15px; color: var(--label); }
